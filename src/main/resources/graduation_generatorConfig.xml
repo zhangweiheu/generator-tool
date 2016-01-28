@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration>
+    <!-- 如果驱动在classpath下，例如通过maven依赖进来，则可以不在这里指定驱动位置 -->
+    <!--<classPathEntry -->
+    <!--location="D:\maven-repository\aliyun\mysql\mysql-connector-java\5.1.29\mysql-connector-java-5.1.29.jar"/> -->
+    <context id="context1" targetRuntime="org.mybatis.generator.codegen.mybatis3.NoMergeIntrospectedTableMyBatis3Impl"
+             introspectedColumnImpl="com.generator.plugin.MyIntrospectedColumn">
+        <property name="javaFileEncoding" value="UTF-8"/>
+        <plugin type="org.mybatis.generator.plugins.SerializablePlugin"/>
+        <plugin type="org.mybatis.generator.plugins.RenameExampleClassPlugin">
+            <property name="searchString" value="Example$"/>
+            <property name="replaceString" value="Condition"/>
+        </plugin>
+        <plugin type="com.generator.plugin.RenameExampleAndPrimaryKeyPlugin"/>
+        <plugin type="com.generator.plugin.MysqlPagingPlugin"/>
+        <plugin type="com.generator.plugin.TinyintToIntegerPlugin"/>
+        <plugin type="com.generator.plugin.CommentPlugin"/>
+
+        <commentGenerator>
+            <!-- 不生成原生的注解信息 -->
+            <property name="suppressAllComments" value="true"/>
+        </commentGenerator>
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://45.32.48.131:3306/graduation" userId="zhangwei"
+                        password="zhangwei"/>
+
+        <javaTypeResolver>
+            <property name="forceBigDecimals" value="false"/>
+        </javaTypeResolver>
+
+        <javaModelGenerator targetPackage="" targetProject="">
+            <property name="enableSubPackages" value="true"/>
+            <property name="trimStrings" value="true"/>
+        </javaModelGenerator>
+
+        <sqlMapGenerator targetPackage="" targetProject=""/>
+
+        <javaClientGenerator targetPackage="" targetProject="" type="XMLMAPPER"/>
+
+        <table tableName="user" domainObjectName="User">
+            <generatedKey column="id" identity="true" sqlStatement="mysql"/>
+        </table>
+        <table tableName="paper" domainObjectName="Paper">
+            <generatedKey column="id" identity="true" sqlStatement="mysql"/>
+        </table>
+        <table tableName="tag" domainObjectName="Tag">
+            <generatedKey column="id" identity="true" sqlStatement="mysql"/>
+        </table>
+        <table tableName="question_bank" domainObjectName="QuestionBank">
+            <generatedKey column="id" identity="true" sqlStatement="mysql"/>
+        </table>
+
+
+    </context>
+</generatorConfiguration>
