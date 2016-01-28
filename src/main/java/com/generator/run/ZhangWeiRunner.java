@@ -17,7 +17,10 @@ public class ZhangWeiRunner {
         runner.setJavaClientTargetPackage(mapperPackage);
 
 //        设置生成的表
-//        runner.addFullyQualifiedTable("paper");
+        runner.addFullyQualifiedTable("question_bank");
+        runner.addFullyQualifiedTable("tag");
+        runner.addFullyQualifiedTable("paper");
+        runner.addFullyQualifiedTable("user");
         runner.run();
     }
 }
