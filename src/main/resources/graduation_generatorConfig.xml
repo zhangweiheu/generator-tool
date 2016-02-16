@@ -40,9 +40,12 @@
 
         <table tableName="user" domainObjectName="User">
             <generatedKey column="id" identity="true" sqlStatement="mysql"/>
+            <columnOverride column="is_admin" javaType="java.lang.Boolean" />
+            <columnOverride column="is_delete" javaType="java.lang.Boolean" />
         </table>
         <table tableName="paper" domainObjectName="Paper">
             <generatedKey column="id" identity="true" sqlStatement="mysql"/>
+            <columnOverride column="is_delete" javaType="java.lang.Boolean" />
         </table>
         <table tableName="tag" domainObjectName="Tag">
             <generatedKey column="id" identity="true" sqlStatement="mysql"/>

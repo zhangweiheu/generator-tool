@@ -10,7 +10,7 @@ public class ZhangWeiRunner {
         Runner runner = new Runner();
         runner.setConfigFile(ZhangWeiRunner.class.getClassLoader().getResource("graduation_generatorConfig.xml").getFile());
         runner.setContextIds("context1");
-        runner.setTargetProject("/Users/36kr/GraduationProject/exams-system-core/src/main/java");
+        runner.setTargetProject("E:\\GraduationProject\\exams-system-core\\src\\main\\java");
         runner.setJavaModelTargetPackage("com.online.exams.system.core.model");
         String mapperPackage = "com.online.exams.system.core.mapper";
         runner.setSqlMapTargetPackage(mapperPackage);
