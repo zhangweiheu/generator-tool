@@ -16,11 +16,11 @@ public class ZhangWeiRunner {
         runner.setSqlMapTargetPackage(mapperPackage);
         runner.setJavaClientTargetPackage(mapperPackage);
 
-//        设置生成的表
-        runner.addFullyQualifiedTable("question");
-        runner.addFullyQualifiedTable("tag");
-        runner.addFullyQualifiedTable("paper");
-        runner.addFullyQualifiedTable("user");
+        //        设置生成的表
+//        runner.addFullyQualifiedTable("question");
+//        runner.addFullyQualifiedTable("tag");
+//        runner.addFullyQualifiedTable("paper");
+//        runner.addFullyQualifiedTable("user");
         runner.run();
     }
 }

@@ -1,13 +1,22 @@
 package com.generator.run;
 
+import java.io.Console;
 import java.io.File;
-import java.util.*;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
+import java.util.Scanner;
 
 /**
  * Created by zhang on 2016/2/27.
  */
 public class TestProcessBuilder {
     public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+        String m = sc.nextLine();
+        System.out.println(m);
+
 
         String exeDir = "C:\\Program Files\\Java\\jdk1.8.0_51\\bin"; // PngMate.exe文件存放目录
         String workDir = "f:\\";     // 工作目录
@@ -17,6 +26,7 @@ public class TestProcessBuilder {
         List<String> command = new LinkedList<String>();
         command.add("javac.exe");
         command.add(javaSource);
+        command.add("<");
 
         ProcessBuilder processBuilder = new ProcessBuilder();
         processBuilder.command(command);

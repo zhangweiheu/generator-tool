@@ -47,8 +47,8 @@
         </table>
         <table tableName="paper" domainObjectName="Paper">
             <generatedKey column="id" identity="true" sqlStatement="mysql"/>
-            <columnOverride column="is_delete" javaType="java.lang.Boolean" />
             <columnOverride column="paper_type" javaType="com.online.exams.system.core.enums.PaperTypeEnum" />
+            <columnOverride column="status" javaType="com.online.exams.system.core.enums.StatusEnum"/>
         </table>
         <table tableName="tag" domainObjectName="Tag">
             <generatedKey column="id" identity="true" sqlStatement="mysql"/>
@@ -57,8 +57,8 @@
         </table>
         <table tableName="question" domainObjectName="Question">
             <generatedKey column="id" identity="true" sqlStatement="mysql"/>
-            <columnOverride column="type" javaType="com.online.exams.system.core.enums.QuestionTypeEnum"/>
-            <columnOverride column="status" javaType="com.online.exams.system.core.enums.QuestionStatusEnum"/>
+            <columnOverride column="question_type" javaType="com.online.exams.system.core.enums.QuestionTypeEnum"/>
+            <columnOverride column="status" javaType="com.online.exams.system.core.enums.StatusEnum"/>
         </table>
 
 
