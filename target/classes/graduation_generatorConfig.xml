@@ -40,46 +40,25 @@
 
         <javaClientGenerator targetPackage="" targetProject="" type="XMLMAPPER"/>
 
-        <!--<table tableName="user" domainObjectName="User">-->
-            <!--<generatedKey column="id" identity="true" sqlStatement="mysql"/>-->
-            <!--<columnOverride column="is_admin" javaType="java.lang.Boolean" />-->
-            <!--<columnOverride column="is_delete" javaType="java.lang.Boolean" />-->
-        <!--</table>-->
-        <!--<table tableName="paper" domainObjectName="Paper">-->
-            <!--<generatedKey column="id" identity="true" sqlStatement="mysql"/>-->
-            <!--<columnOverride column="paper_type" javaType="com.online.exams.system.core.enums.PaperTypeEnum" />-->
-            <!--<columnOverride column="status" javaType="com.online.exams.system.core.enums.StatusEnum"/>-->
-        <!--</table>-->
-        <!--<table tableName="tag" domainObjectName="Tag">-->
-            <!--<generatedKey column="id" identity="true" sqlStatement="mysql"/>-->
-            <!--<columnOverride column="tag_value" javaType="com.online.exams.system.core.enums.TagEnum" />-->
-            <!--<columnOverride column="ref_type" javaType="com.online.exams.system.core.enums.RefTypeEnum" />-->
-        <!--</table>-->
-        <!--<table tableName="question" domainObjectName="Question">-->
-            <!--<generatedKey column="id" identity="true" sqlStatement="mysql"/>-->
-            <!--<columnOverride column="question_type" javaType="com.online.exams.system.core.enums.QuestionTypeEnum"/>-->
-            <!--<columnOverride column="status" javaType="com.online.exams.system.core.enums.StatusEnum"/>-->
-        <!--</table>-->
-
-        <!--杨宇-->
-
-        <table tableName="goods" domainObjectName="Goods">
-            <generatedKey column="id" identity="true" sqlStatement="mysql"/>
-            <columnOverride column="status" javaType="com.shop.service.enums.GoodsStatusEnum"/>
-        </table>
-        <table tableName="order" domainObjectName="Order">
-            <generatedKey column="id" identity="true" sqlStatement="mysql"/>
-            <columnOverride column="express_status" javaType="com.shop.service.enums.ExpressStatusEnum"/>
-        </table>
         <table tableName="user" domainObjectName="User">
             <generatedKey column="id" identity="true" sqlStatement="mysql"/>
             <columnOverride column="is_admin" javaType="java.lang.Boolean" />
             <columnOverride column="is_delete" javaType="java.lang.Boolean" />
         </table>
-        <table tableName="order_detail" domainObjectName="OrderDetail">
+        <table tableName="paper" domainObjectName="Paper">
             <generatedKey column="id" identity="true" sqlStatement="mysql"/>
-            <columnOverride column="question_type" javaType="com.online.exams.system.core.enums.QuestionTypeEnum"/>
-            <columnOverride column="status" javaType="com.online.exams.system.core.enums.StatusEnum"/>
+            <columnOverride column="paper_type" javaType="com.online.exams.system.core.mybatis.enums.PaperTypeEnum" />
+            <columnOverride column="status" javaType="com.online.exams.system.core.mybatis.enums.StatusEnum"/>
+        </table>
+        <table tableName="tag" domainObjectName="Tag">
+            <generatedKey column="id" identity="true" sqlStatement="mysql"/>
+            <columnOverride column="tag_value" javaType="com.online.exams.system.core.mybatis.enums.TagEnum" />
+            <columnOverride column="ref_type" javaType="com.online.exams.system.core.mybatis.enums.RefTypeEnum" />
+        </table>
+        <table tableName="question" domainObjectName="Question">
+            <generatedKey column="id" identity="true" sqlStatement="mysql"/>
+            <columnOverride column="question_type" javaType="com.online.exams.system.core.mybatis.enums.QuestionTypeEnum"/>
+            <columnOverride column="status" javaType="com.online.exams.system.core.mybatis.enums.StatusEnum"/>
         </table>
 
 
