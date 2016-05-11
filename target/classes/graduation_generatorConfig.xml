@@ -42,12 +42,13 @@
 
         <table tableName="user" domainObjectName="User">
             <generatedKey column="id" identity="true" sqlStatement="mysql"/>
-            <columnOverride column="is_admin" javaType="java.lang.Boolean" />
-            <columnOverride column="is_delete" javaType="java.lang.Boolean" />
+            <columnOverride column="type" javaType="com.online.exams.system.core.mybatis.enums.UserTypeEnum" />
+            <columnOverride column="status" javaType="com.online.exams.system.core.mybatis.enums.UserStatusEnum" />
         </table>
         <table tableName="paper" domainObjectName="Paper">
             <generatedKey column="id" identity="true" sqlStatement="mysql"/>
-            <columnOverride column="paper_type" javaType="com.online.exams.system.core.mybatis.enums.PaperTypeEnum" />
+            <columnOverride column="paper_type" javaType="com.online.exams.system.core.mybatis.enums.PaperTypeEnum"/>
+            <columnOverride column="is_exam" javaType="java.lang.Boolean"/>
             <columnOverride column="status" javaType="com.online.exams.system.core.mybatis.enums.StatusEnum"/>
         </table>
         <table tableName="tag" domainObjectName="Tag">
